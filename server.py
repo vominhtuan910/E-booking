@@ -32,7 +32,7 @@ def handle_client_cancel(client_socket, address, request, username=None):
     # validate date and time:
     created_date = db.execute_query(db_connection, get_query, True)[0][0]
 
-    TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+    TIME_FORMAT = '%Y-%m-%d %H:%M:%S' #format time to query easy
     cur_date = datetime.now()
     created_date = datetime.strptime(created_date, TIME_FORMAT)
 
@@ -67,7 +67,7 @@ def handle_client_list_reservations(client_socket, address, request, username):
     """
 
     reservations = db.execute_query(db_connection, get_query, True)
-
+    test = 'push'
     did = False
     hotel_name = start_date = end_date = None
     data = []
