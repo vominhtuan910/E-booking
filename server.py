@@ -67,7 +67,6 @@ def handle_client_list_reservations(client_socket, address, request, username):
     """
 
     reservations = db.execute_query(db_connection, get_query, True)
-    test = 'push'
     did = False
     hotel_name = start_date = end_date = None
     data = []
